@@ -1,0 +1,90 @@
+html, body {
+    font-family: "Open Sans", Roboto, sans-serif !important;
+}
+
+body {
+  border-top: 4px solid royalblue;
+}
+
+.blog-header, .blog-post, .blog-pagination {
+  /* margin-bottom: 2rem; */
+}
+
+/* Make sure the image size is reasonable. */
+.blog-post img {
+  /* max-width: 100%; */
+}
+
+.navbar {
+  background-color: white !important;
+}
+
+.navbar-brand {
+  max-width: 50%;
+}
+
+.navbar-brand img {
+  max-width: 100%;
+}
+
+.navbar a, .ukwa-hero-banner button {
+  color: #2e6dd9 !important;
+}
+
+.navbar a.disabled {
+  color: #6c757d !important;
+}
+
+.navbar a:hover {
+    text-decoration: underline !important;
+}
+
+.blog-main h2, .blog-main h3, .blog-main h4 {
+  color: #0c49b0;  
+}
+
+.ukwa-hero-banner {
+  color: #ffffff;
+  min-height: 15rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url("/dist/img/UKWA-hero-composite-final.png");
+  background-size: cover;
+}
+
+.ukwa-hero-banner h1 {
+}
+
+.footer-logos {
+  border-bottom: 4px solid royalblue;
+}
+.footer-logos .img-thumbnail {
+  border: none;
+}
+
+*:focus {
+  outline: 3px solid red !important;
+}
+
+#tipsDialog {
+  background-color: #2e6dd9;
+}
+
+/* Ensure images in markdown are not way too large */
+.information-page img {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Higher-contrast colours */
+a {
+  color: #006ee5;
+}
+.btn-primary {
+  background-color: #006ee5;
+}
+code {
+  color: #d1377e;
+}
