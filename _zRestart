@@ -1,0 +1,41 @@
+#!/bin/env bash
+
+clear
+
+# kill current container if exists
+currCon=$(podman ps | grep '8090->80' | grep -oP "[a-z0-9_]+$")
+if [[ ${currCon} ]]; then
+	echo "Stopping current container [${currCon}]"
+	podman stop ${currCon}
+	wait
+else
+	echo "No container currently running"
+fi
+
+echo "Emptying podman"
+podman rm -a
+echo "Emptying directories"
+sudo rm /home/tmp/.local/share/containers/* /home/tmp/.config/containers /home/tmp/.cache/containers/* -rf
+sleep 2
+
+# ------------------
+
+echo
+podman ps -a
+echo
+
+# build current container
+echo "Building ukwa"
+cd ~/w/github/ukwa-ukwa-website/
+podman build -t ukwa .
+
+# start container
+echo "Starting ukwa container"
+podman run -p 8090:80 -d ukwa
+echo
+
+podman ps
+cd -
+
+echo
+podman logs -f 

@@ -1,0 +1,11 @@
+<div class="header">
+<div class="left">
+<img style="width:20%" src="/_ssi/ukwa-2018-onwhite-close.svg" alt="UK Web Archive website logo">
+</div>
+<div class="right">
+<ul>
+<li><a href="#en">English</a></li>
+<li lang="cy"><a href="#cy">Cymraeg</a></li>
+<li land="gd"><a href="#gd">Gàidhlig na h-Alba</a></li>
+</ul>
+</div>

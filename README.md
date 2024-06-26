@@ -1,16 +1,16 @@
-# UKWA WEBSITE (STATIC)
+# UKWA Website holding page
 
-## Building and running static UKWA WEBSITE
-
-To build docker image
+To build the UKWA website holding page as a container, run:
 
 ```
-docker build -t <TAG-NAME> .
+podman build -t <TAG-NAME> .
 ```
 
-To run docker image
+_TAG-NAME will define the container service name and has no affect to the UKWA website._
+
+
+To run the container image:
 
 ```
-docker run -p 8090:80 -d <TAG-NAME>
+podman run -p 8090:80 -d <TAG-NAME>
 ```
-
