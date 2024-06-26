@@ -3,20 +3,5 @@ font-family: "Open Sans", Roboto, sans-serif !important;
 }
 
 body {
-border-top: 4px solid royalblue;
-}
-
-.header {
-
-}
-
-.title {
-background-color: royalblue;
-color: white;
-width: 100%;
-padding: 10px;
-}
-
-.footer {
-border-bottom: 4px solid royalblue;
+ border-top: 4px solid royalblue;
 }

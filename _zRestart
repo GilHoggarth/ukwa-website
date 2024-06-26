@@ -9,14 +9,14 @@ if [[ ${currCon} ]]; then
 	podman stop ${currCon}
 	wait
 else
-	echo "No container currently running"
+	echo "UKWA container not running"
 fi
 
-echo "Emptying podman"
-podman rm -a
-echo "Emptying directories"
-sudo rm /home/tmp/.local/share/containers/* /home/tmp/.config/containers /home/tmp/.cache/containers/* -rf
-sleep 2
+#echo "Emptying podman"
+#podman rm -a
+#echo "Emptying directories"
+#sudo rm /home/tmp/.local/share/containers/* /home/tmp/.config/containers /home/tmp/.cache/containers/* -rf
+#sleep 2
 
 # ------------------
 
@@ -26,16 +26,10 @@ echo
 
 # build current container
 echo "Building ukwa"
-cd ~/w/github/ukwa-ukwa-website/
 podman build -t ukwa .
 
 # start container
 echo "Starting ukwa container"
 podman run -p 8090:80 -d ukwa
 echo
-
 podman ps
-cd -
-
-echo
-podman logs -f 
